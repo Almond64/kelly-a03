@@ -19,65 +19,40 @@ public class Solution24 {
         java.lang.String string2;
 
         //Prompt the user to enter the first string
-        string1 = app.getInputFromUser1();
+        string1 = app.getInputFromUser();
         //Prompt the user to enter the second string
-        string2 = app.getInputFromUser2();
+        string2 = app.getInputFromUser();
         //convert strings to char arrays
-        char[] ch1 = string1ToCharArray(string1);
-        char[] ch2 = string2ToCharArray(string2);
+        char[] ch1 = app.stringToCharArray(string1);
+        char[] ch2 = app.stringToCharArray(string2);
 
         // sort char arrays
         Arrays.sort(ch1);
         Arrays.sort(ch2);
 
-        //Determine if ch1 and ch22 are anagrams
+        //Determine if ch1 and ch2 are anagrams
         boolean anagram = app.isAnagram(ch1, ch2);
 
         //Print the result
-        //remember to print quotation marks around the strings
-        if (anagram == true) {
-            //remember to print quotation marks around the strings
-            System.out.printf("%s and %s are anagrams.\n");
-        } else {
-            //remember to print quotation marks around the strings
-            System.out.printf("%s and %s are not anagrams.\n");
-        }
+        output(anagram, string1, string2);
     }
 
-    public java.lang.String getInputFromUser1() {
+    java.lang.String getInputFromUser() {
         //print input prompt
         System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
         // read in String data (whitespace and all)
-        java.lang.String str1 = input.next();
+        java.lang.String str = input.next();
         // return new String
-        return str1;
+        return str;
     }
 
-    public java.lang.String getInputFromUser2() {
-        //print input prompt
-        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
-        // read in String data (whitespace and all)
-        java.lang.String str2 = input.next();
-        // return new String
-        return str2;
-    }
-
-    public static char[] string1ToCharArray(java.lang.String string1) {
-        //Create char array of string1 length
-        char[] ch1 = new char[string1.length()];
-        //Copy string1 into its char array
-        System.arraycopy(string1, 0, ch1, 0, string1.length());
-        //Return string1
-        return ch1;
-    }
-
-    public static char[] string2ToCharArray(java.lang.String string2) {
-        //Create char array of string1 length
-        char[] ch2 = new char[string2.length()];
-        //Copy string1 into its char array
-        System.arraycopy(string2, 0, ch2, 0, string2.length());
-        //Return string1
-        return ch2;
+    public char[] stringToCharArray(java.lang.String str) {
+        //Create char array of str length
+        char[] ch = new char[str.length()];
+        //Copy str into its char array
+        System.arraycopy(str, 0, ch, 0, str.length());
+        //Return ch
+        return ch;
     }
 
     public boolean isAnagram(char[] string1, char[] string2) {
@@ -95,6 +70,17 @@ public class Solution24 {
                 return false;
 
         return true;
+    }
+
+    static void output(boolean isAnagram, java.lang.String string1, java.lang.String string2) {
+        //remember to print quotation marks around the strings
+        if (isAnagram) {
+            //remember to print quotation marks around the strings
+            System.out.printf("%s and %s are anagrams.\n", string1, string2);
+        } else {
+            //remember to print quotation marks around the strings
+            System.out.printf("%s and %s are not anagrams.\n", string1, string2);
+        }
     }
 
 }

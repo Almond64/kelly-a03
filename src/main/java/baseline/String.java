@@ -5,9 +5,14 @@ public class String {
     private String str2;
     private int length;
 
+    /*
     String (String str1, String str2) {
         this.str1 = str1;
         this.str2 = str2;
+    }*/
+
+    public String(java.lang.String s1, String s2) {
+        this.str1 = str1;
     }
 
     public int length() {

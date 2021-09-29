@@ -23,7 +23,6 @@ class Solution24Test {
         char[] ch2 = new char[]{'l', 'i', 's', 't', 'e', 'n'};
 
         boolean actual_result = app.isAnagram(ch1, ch2);
-        boolean expected_result = true;
 
         assertTrue(actual_result);
     }

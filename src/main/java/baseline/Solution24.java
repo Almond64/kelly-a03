@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Solution24 {
 
-    public static final Scanner input = new Scanner(System.in);
+    public static final Scanner input = new Scanner(System.in).useDelimiter("\n");
 
     public static void main(String[] args) {
         Solution24 app = new Solution24();
@@ -18,9 +18,13 @@ public class Solution24 {
         java.lang.String string1;
         java.lang.String string2;
 
+        //Print the input prompt
+        System.out.println("Enter two strings and I'll tell you if they are anagrams: ");
         //Prompt the user to enter the first string
+        System.out.print("Enter the first string: ");
         string1 = app.getInputFromUser();
         //Prompt the user to enter the second string
+        System.out.print("Enter the second string: ");
         string2 = app.getInputFromUser();
         //convert strings to char arrays
         char[] ch1 = app.stringToCharArray(string1);
@@ -38,21 +42,14 @@ public class Solution24 {
     }
 
     java.lang.String getInputFromUser() {
-        //print input prompt
-        System.out.print("Enter two strings and I'll tell you if they are anagrams:\nEnter the first string: ");
         // read in String data (whitespace and all)
-        java.lang.String str = input.next();
         // return new String
-        return str;
+        return input.next();
     }
 
     public char[] stringToCharArray(java.lang.String str) {
-        //Create char array of str length
-        char[] ch = new char[str.length()];
-        //Copy str into its char array
-        System.arraycopy(str, 0, ch, 0, str.length());
-        //Return ch
-        return ch;
+        // create an array and store the array returned by toCharArray()
+        return str.toCharArray();
     }
 
     public boolean isAnagram(char[] string1, char[] string2) {
@@ -76,10 +73,10 @@ public class Solution24 {
         //remember to print quotation marks around the strings
         if (isAnagram) {
             //remember to print quotation marks around the strings
-            System.out.printf("%s and %s are anagrams.\n", string1, string2);
+            System.out.printf("\"%s\" and \"%s\" are anagrams.\n", string1, string2);
         } else {
             //remember to print quotation marks around the strings
-            System.out.printf("%s and %s are not anagrams.\n", string1, string2);
+            System.out.printf("\"%s\" and \"%s\" are not anagrams.\n", string1, string2);
         }
     }
 

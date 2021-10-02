@@ -35,7 +35,7 @@ public class Solution27 {
         return 0;
     }
 
-    private String validateFirstName(String getFirstName) {
+    public String validateFirstName(String getFirstName) {
         /*
         Check if the first name is at least two characters long.
         If not, create string = "The first name must at least be 2 characters long."
@@ -45,7 +45,7 @@ public class Solution27 {
         return null;
     }
 
-    private String validateLastName(String getLastName) {
+    public String validateLastName(String getLastName) {
         /*
         Check if the last name is at least two characters long.
         If not, create string = "The last name must at least be 2 characters long."
@@ -55,7 +55,7 @@ public class Solution27 {
         return null;
     }
 
-    private String validateEmployeeID(String getEmployeeID) {
+    public String validateEmployeeID(String getEmployeeID) {
         /*
         Check if the employee ID is in the format of AA-1234.
         If not, create string = "The employee ID must be in the form of AA-1234."
@@ -63,7 +63,7 @@ public class Solution27 {
         return null;
     }
 
-    private String validateZipCode(int getZipCode) {
+    public String validateZipCode(int getZipCode) {
         /*
         Check if the zip code is a 5 digit integer.
         If not, create string = "The zipcode must be a 5 digit number."
@@ -71,7 +71,7 @@ public class Solution27 {
         return null;
     }
 
-    private void validateInput(String validateFirstName, String validateLastName, String validateEmployeeID, String validateZipCode)  {
+    public void validateInput(String validateFirstName, String validateLastName, String validateEmployeeID, String validateZipCode)  {
         //Piece together all the outputs from the validation functions into a single output statement.
     }
 

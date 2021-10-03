@@ -5,21 +5,25 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution29 {
 
+    public static final Scanner input = new Scanner(System.in);
+
     private int userInput() {
-        //prompt the user for the rate of return
-        //scan and return the rate of return
+        //Prompt the user to enter the rate of return.
+        //return user input
         return 0;
     }
 
-    public void doubleYourInvestment(int userInput) {
-        //While the input is invalid, say "Sorry. That's not a valid input."
-        //If the input's valid, calculate the time it will take to double the user's investment
+    public static void doubleYourInvestment(int userInput) {
+        //While the user input is invalid, prompt the user to re-enter the rate of return.
+        //If the user input is valid, print the number of years it will take to double the investment.
     }
 
     public static void main(String[] args) {
-        //declare int rate and set equal to the user input
         //call the doubleYourInvestment function
+        //doubleYourInvestment();
     }
 }

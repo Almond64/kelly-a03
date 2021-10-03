@@ -10,7 +10,7 @@ class Solution27Test {
         Solution27 app = new Solution27();
         String firstName1 = "J";
         String actual_result = app.validateFirstName(firstName1);
-        String expected_result = "The string must be at least 2 characters long.\n";
+        String expected_result = "The first name must be at least 2 characters long.\n";
         assertEquals(expected_result, actual_result);
     }
 
@@ -45,7 +45,7 @@ class Solution27Test {
     @Test
     void testZipCode1() {
         Solution27 app = new Solution27();
-        int zipCode1 = Integer.parseInt("ABCDE");
+        String zipCode1 = "ABCDE";
         String actual_result = app.validateZipCode(zipCode1);
         String expected_result = "The zipcode must be a 5 digit number.\n";
         assertEquals(expected_result, actual_result);
@@ -54,7 +54,7 @@ class Solution27Test {
     @Test
     void testZipCode2() {
         Solution27 app = new Solution27();
-        int zipCode2 = Integer.parseInt("55555");
+        String zipCode2 = "55555";
         String actual_result = app.validateZipCode(zipCode2);
         String expected_result = " ";
         assertEquals(expected_result, actual_result);
@@ -65,7 +65,7 @@ class Solution27Test {
         Solution27 app = new Solution27();
         String employeeID1 = "A12-1234";
         String actual_result = app.validateEmployeeID(employeeID1);
-        String expected_result = "The employeeID must be in the format of AA-1234.\n";
+        String expected_result = "The employee ID must be in the format of AA-1234.\n";
         assertEquals(expected_result, actual_result);
     }
 
